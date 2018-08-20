@@ -51,17 +51,17 @@ int main()
 
 
 
-	Image h1 {Point{400,100}, "android.jpg"};
-	win.attach(h1);
-	Image h2 {Point{600,300}, "android.jpg"};
-	win.attach(h2);
-	Image h3 {Point{100,400}, "android.jpg"};
-	win.attach(h3);
-	Image h4 {Point{300,600}, "android.jpg"};
-	win.attach(h4);
+	Image pic1 {Point{400,100}, "android.jpg"};
+	win.attach(pic1);
+	Image pic2 {Point{600,300}, "android.jpg"};
+	win.attach(pic2);
+	Image pic3 {Point{100,400}, "android.jpg"};
+	win.attach(pic3);
+	Image pic4 {Point{300,600}, "android.jpg"};
+	win.attach(pic4);
 
-	Image shaman {Point{0,0}, "pontok.jpg"};
-	win.attach(shaman);
+	Image pontok{Point{0,0}, "pontok.jpg"};
+	win.attach(pontok);
 
 	win.wait_for_button();
 
@@ -74,17 +74,17 @@ int main()
 	{
 		for(int i=0;i<7;i++)
 		{
-			shaman.move(100,0);
+			pontok.move(100,0);
 			win.wait_for_button();
 		}
 		if(rows_done==7)
 		{
 			rows_done=0;
-			shaman.move(-700,-700);
+			pontok.move(-700,-700);
 		}
 		else
 		{
-			shaman.move(-700,100);
+			pontok.move(-700,100);
 			rows_done++;
 		}
 		win.wait_for_button();

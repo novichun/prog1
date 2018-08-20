@@ -4,12 +4,12 @@ using namespace std;
 
 struct B1
 {
-	virtual void vf() const {cout<<"B1::vf"<<endl;}
+	virtual void vf() const {cout<<"B1::vf"<<endl;}	//Absztrakt mert tiszta virtual van benne
 	void f() const {cout<<"B1::f"<<endl;}
 	virtual void pvf() =0;
 };
 
-struct D1:B1 
+struct D1:B1 //Átadja az értéket
 {	
 	void vf() const override {cout<<"D1::vf"<<endl;}
 	void f() const {cout<<"D1::f"<<endl;}
@@ -23,7 +23,7 @@ struct D2:D1
 
 struct B2
 {	
-	virtual void pvf()=0;
+	virtual void pvf()=0; //Tiszta virtual = 0 az értéke nincs alap érték de átadható neki
 };
 
 struct D21:B2
